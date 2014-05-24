@@ -8,6 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'
@@ -17,6 +18,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'pry'
 end
 
 group :test do
