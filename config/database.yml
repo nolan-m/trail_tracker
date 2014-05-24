@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: trails_development
+
+test:
+  adapter: postgresql
+  database: trails_test
