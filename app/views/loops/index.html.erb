@@ -1,0 +1,11 @@
+<h1>All Loops</h1>
+<ul>
+<% @loops.each do |loop| %>
+	<li><h3><%= loop.name %></h3></li>
+	<ul>
+		<% loop.trails.each do |trail| %>
+			<li><%= trail.name %></li>
+		<% end %>
+	</ul>
+<% end %>
+</ul>
