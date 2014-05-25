@@ -1,5 +1,6 @@
 
 <h1>Add a Trail</h1>
+<%= render('layouts/errors', object: @trail) %>
 <%= form_for @trail do |f| %>
 	<div class="form-group">
 		<%= f.label :name %>
