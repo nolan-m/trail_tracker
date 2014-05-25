@@ -1,6 +1,7 @@
 class BadgesController < ApplicationController
 	def index
 		@badges = Badge.all
+    @types = ['distance', 'summit', 'total', 'trail', 'loop']
 	end
 
   def show
