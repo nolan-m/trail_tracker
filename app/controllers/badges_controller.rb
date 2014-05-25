@@ -14,6 +14,9 @@ class BadgesController < ApplicationController
   def create
   	@badge = Badge.new(badge_params)
   	if @badge.save
+      # params[:badge][:trail_ids].each do |trail|
+      #   @badge.trails << Trail.find(trail)
+      # end
   		flash[:notice] = "Badge created."
       redirect_to badges_path
     else
@@ -23,7 +26,7 @@ class BadgesController < ApplicationController
 
 private
   def badge_params
-    params.require(:badge).permit(:name, :requirements)
+    params.require(:badge).permit(:name, :requirements, :trail_ids => [])
   end
 
 end

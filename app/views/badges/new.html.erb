@@ -8,5 +8,7 @@
     <%= f.label :requirements %>
     <%= f.text_field :requirements %>
   </div>
+	<%= f.label :trail_ids,  "Which trail(s) is this badge available on?" %><br>
+  <%= f.collection_check_boxes :trail_ids, Trail.all, :id, :name %>
  	<%= f.submit class: "btn btn-success" %>
 <% end %>
