@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524214415) do
+ActiveRecord::Schema.define(version: 20140525174224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "badges", force: true do |t|
     t.string "name"
+    t.string "requirements"
   end
 
   create_table "badges_trails", force: true do |t|
