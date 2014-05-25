@@ -1,0 +1,9 @@
+
+<h1>Add a Loop</h1>
+<%= form_for @loop do |f| %>
+	<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: :true %>
+  </div>
+ 	<%= f.submit class: "btn btn-success" %>
+<% end %>
