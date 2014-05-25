@@ -1,0 +1,12 @@
+<h1>Add a Badge</h1>
+<%= form_for @badge do |f| %>
+	<div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: :true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :requirements %>
+    <%= f.text_field :requirements %>
+  </div>
+ 	<%= f.submit class: "btn btn-success" %>
+<% end %>
