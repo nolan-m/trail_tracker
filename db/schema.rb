@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140525214638) do
+ActiveRecord::Schema.define(version: 20140525222818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "badges", force: true do |t|
-    t.string "name"
-    t.string "requirements"
-    t.string "badge_type"
+    t.string   "name"
+    t.string   "requirements"
+    t.string   "badge_type"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "badges_trails", force: true do |t|

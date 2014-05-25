@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
 gem 'bootstrap-sass'
+gem "paperclip", "~> 4.1"
 
 group :development do
   gem 'better_errors'

@@ -4,6 +4,8 @@
 <%= @badge.requirements %>
 
 <p>Available from completing any of these trails:  </p>
+<ul>
 <% @badge.trails.each do |trail| %>
-	<%= link_to trail.name, trail_path(trail) %>
+	<li><%= link_to trail.name, trail_path(trail) %></li>
 <% end %>
+</ul>
