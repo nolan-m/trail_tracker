@@ -1,1 +1,9 @@
-<h1>Badge</h1>
+<h1><%= @badge.name %></h1>
+
+<p>To earn this badge: </p>
+<%= @badge.requirements %>
+
+<p>Available from completing any of these trails:  </p>
+<% @badge.trails.each do |trail| %>
+	<%= link_to trail.name, trail_path(trail) %>
+<% end %>

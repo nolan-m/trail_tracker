@@ -1,3 +1,8 @@
-<h1>Loop</h1>
-
-<%= @loop.name %>
+<h1><%= @loop.name %></h1>
+<p>Complete all the trails in this loop to each the completion badge.</p>
+<h4>Trails included in this loop:  </h4>
+<ul>
+	<% @loop.trails.each do |trail| %>
+		<li><%= link_to trail.name, trail_path(trail) %></li>
+	<% end %>
+</ul>

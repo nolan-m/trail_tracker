@@ -1,7 +1,9 @@
-<h1>All Badges</h1>
+<h1>Collect These Badges</h1>
 
 <ul>
-<% @badges.each do |badge| %>
-	<li><%= badge.name %></li>
-<% end %>
+	<hr>
+	<% @badges.each do |badge| %>
+		<li><%= link_to badge.name, badge_path(badge) %></li>
+		<hr>
+	<% end %>
 </ul>

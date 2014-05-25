@@ -1,0 +1,6 @@
+Welcome, <h4><%= @user.name %></h4>
+
+<h4>Your Badges</h4>
+<% @user.badges.each do |badge| %>
+	<%= badge.name %>
+<% end %>
