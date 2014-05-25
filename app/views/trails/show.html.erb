@@ -8,6 +8,6 @@
 <h4>Badges earned from completing this hike: </h4>
 <ul>
 <% @trail.badges.each do |badge| %>
-	<li><%= link_to badge.name, badge_path(badge) %></li>
+	<li><%= link_to badge.name, badge_path(badge) %> <%= image_tag badge.image.url(:thumb) %></li>
 <% end %>
 </ul>

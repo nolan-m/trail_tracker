@@ -3,7 +3,7 @@
 <ul>
 	<hr>
 	<% @badges.each do |badge| %>
-		<li><%= link_to badge.name, badge_path(badge) %></li>
+		<li><%= link_to badge.name, badge_path(badge) %> <%= image_tag badge.image.url %></li>
 		<hr>
 	<% end %>
 </ul>
