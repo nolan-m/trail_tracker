@@ -1,5 +1,13 @@
 <h1><%= @trail.name %></h1>
-
+<h4>Details:  </h4>
 <p><b>Length:  </b><%= @trail.length %> Miles Roundtrip</p> 
 <p><b>Difficulty:  </b><%= @trail.difficulty %></p></p>
 <p><b>Description:  </b><%= @trail.description %></p>
+
+
+<h4>Badges earned from completing this hike: </h4>
+<ul>
+<% @trail.badges.each do |badge| %>
+	<li><%= link_to badge.name, badge_path(badge) %></li>
+<% end %>
+</ul>
