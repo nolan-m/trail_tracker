@@ -32,6 +32,8 @@ class Ability
     user ||= User.new # guest user
     if user.admin
       can :manage, :all
+    elsif user.id
+      can :create, :completeds
     else
       can :read, :all
     end
