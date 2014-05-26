@@ -28,7 +28,7 @@ class BadgesController < ApplicationController
 
 private
   def badge_params
-    params.require(:badge).permit(:name, :requirements, :badge_type, :trail_ids => [])
+    params.require(:badge).permit(:name, :requirements, :badge_type, :image, :trail_ids => [])
   end
 
 end
