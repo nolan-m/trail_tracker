@@ -1,7 +1,9 @@
 development:
   adapter: postgresql
   database: trails_development
+  host: localhost
 
 test:
   adapter: postgresql
   database: trails_test
+  host: localhost
