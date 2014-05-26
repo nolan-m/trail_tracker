@@ -7,9 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
 <div class="container" id="main">
     <div class="navbar navbar-default navbar-fixed-top">
     <%= link_to "Home", root_url, class: "navbar-brand pull-left" %>
@@ -29,14 +26,23 @@
       <div class="navbar-text pull-right">
         Logged in as &nbsp; <%= link_to current_user.email, user_path(current_user) %>
       </div>
+      <% if current_user.admin %>
+      </div>
+        <div class="navbar navbar-default navbar-fixed-top" id="nav-admin">
+          <div class="navbar-text">Admin Options</div>
+          <%= link_to "Add a Loop", new_loop_path, class: "navbar-text pull-left" %>
+          <%= link_to "Add a Trail", new_trail_path, class: "navbar-text pull-left" %>
+          <%= link_to "Add a Badge", new_badge_path, class: "navbar-text pull-left" %>
+        </div>
+      <% end %>
     <% else %>
       <%= link_to "Sign Up", new_user_registration_path, class: "navbar-text pull-right" %>
       <%= link_to "Log In", new_user_session_path, class: "navbar-text pull-right" %>
-    <% end %>
-  </div>
+  </div>    
+  <% end %>
 
 
-<%= yield %>
-
+  <%= yield %>
+</div>
 </body>
 </html>
