@@ -1,12 +1,22 @@
 <h1>Collect These Badges</h1>
-
-<% @types.each do |type| %>
-<hr>
-	<%= type.capitalize %> Badges:
-	<ul>
-		<% @badges.where(badge_type: type).each do |badge| %>
-			<li><%= link_to badge.name, badge_path(badge) %> <%= image_tag badge.image.url %></li>
+<table class="table">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Type</th>
+			<th>Name</th>
+			<th>Image</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @badges.each_with_index do |badge, index| %>
+			<tr>
+				<td><%= index + 1 %></td>
+				<td><%= badge.badge_type %></td>
+				<td><%= link_to badge.name, badge_path(badge) %></td>
+				<td><%= image_tag badge.image(:thumb) %></td>
+			</tr>
 		<% end %>
-	</ul>
-<% end %>
-<hr>
+	</tbody>
+
+</table>

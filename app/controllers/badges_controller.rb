@@ -2,7 +2,7 @@ class BadgesController < ApplicationController
   load_and_authorize_resource
 	def index
 		@badges = Badge.all
-    @types = ['distance', 'summit', 'total', 'trail', 'loop']
+    @types = ['distance', 'summit', 'total', 'trail', 'loop', nil]
 	end
 
   def show

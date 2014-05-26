@@ -12,18 +12,18 @@
    <div class="form-group">
     <p><%= f.label :badge_type, "Type of Badge" %></p>
     <p><%= f.radio_button :badge_type, "distance" %>
-    <%= f.label :badge_type, "Trail Distance - for a single trail" %></p>
+    <%= f.label :badge_type, "Trail Distance - for a single trail", :value => "distance" %></p>
 
     <p><%= f.radio_button :badge_type, "summit" %>
-    <%= f.label :badge_type, "Summit Height - for various summit heights" %></p>
+    <%= f.label :badge_type, "Summit Height - for various summit heights", :value => "summit" %></p>
 
     <p><%= f.radio_button :badge_type, "total" %>
-    <%= f.label :badge_type, "Total Distance - for total distance hiked" %></p>
+    <%= f.label :badge_type, "Total Distance - for total distance hiked", :value => "total" %></p>
 
 		<p><%= f.radio_button :badge_type, "trail" %>
-    <%= f.label :badge_type, "Completed Trail - for completing a specific trail" %></p>
+    <%= f.label :badge_type, "Completed Trail - for completing a specific trail", :value => "trail" %></p>
     <p><%= f.radio_button :badge_type, "loop" %>
-    <%= f.label :badge_type, "Completed Loop - for completing all trails in a loop" %></p>
+    <%= f.label :badge_type, "Completed Loop - for completing all trails in a loop", :value => "loop" %></p>
   </div>
   <div class="form-group">
   	<%= f.label :trail_ids,  "Which trail(s) is this badge available on?" %><br>
