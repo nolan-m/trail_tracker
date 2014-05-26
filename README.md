@@ -19,11 +19,11 @@ A hiking checklist site where users can log their completed trails and receive b
 
 
 
-Gems used:  
-Devise for user creation/login.  
-Paperclip for uploading images to badges.  
-CanCanCan for allowing only admins to create new content.  
+#### Gems used:  
+* Devise for user creation/login.  
+* Paperclip for uploading images to badges.  
+* CanCanCan for allowing only admins to create new content.  
 
-Roadmap:  
-Use ImageMagick to allow default set of badge images and let creator customize text displayed.  
-Users must upload a picture from their hike to earn the badge.  
+#### Roadmap:  
+* Use ImageMagick to allow default set of badge images and let creator customize text displayed.  
+* Users must upload a picture from their hike to earn the badge.  
