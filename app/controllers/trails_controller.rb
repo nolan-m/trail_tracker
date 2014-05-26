@@ -1,6 +1,6 @@
 class TrailsController < ApplicationController
   load_and_authorize_resource
-  
+
 	def index
 		@trails = Trail.all
 	end
@@ -25,7 +25,7 @@ class TrailsController < ApplicationController
 
 private
   def trail_params
-    params.require(:trail).permit(:name, :length, :difficulty, :location, :loop_id, :description)
+    params.require(:trail).permit(:name, :length, :summit, :difficulty, :location, :loop_id, :description)
   end
 
 end

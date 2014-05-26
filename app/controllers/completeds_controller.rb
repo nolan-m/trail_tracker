@@ -7,7 +7,8 @@ load_and_authorize_resource
   def create
     @completed = Completed.new(completed_params)
     if @completed.save
-      Trail.find(completed_params[:trail_id]).badges.each do |badge|
+      completed_trail = Trail.find(completed_params[:trail_id])
+      completed_trail.badges.each do |badge|
         current_user.badges << badge
       end
       flash[:notice] = "Completed created."
