@@ -1,4 +1,6 @@
 class LoopsController < ApplicationController
+  load_and_authorize_resource
+  
 	def index
 		@loops = Loop.all
 	end

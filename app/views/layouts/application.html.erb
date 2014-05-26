@@ -21,12 +21,13 @@
       <center>
         <%= flash[:notice] %>
         <%= flash[:alert] %>
+        <%= flash[:error] %>
       </center>
     </div>
-    <% if user_signed_in? %>      <%= link_to "Add Listing", new_property_path, class: "navbar-text pull-right btn-xs btn-warning" %>
+    <% if user_signed_in? %>
       <%= link_to "Log Out", destroy_user_session_path, method: "delete", class: "navbar-text pull-right" %>
       <div class="navbar-text pull-right">
-        Logged in as &nbsp; <%= link_to current_user.name, user_path(current_user), id: "white" %>
+        Logged in as &nbsp; <%= link_to current_user.email, user_path(current_user) %>
       </div>
     <% else %>
       <%= link_to "Sign Up", new_user_registration_path, class: "navbar-text pull-right" %>
