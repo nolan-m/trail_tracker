@@ -1,6 +1,11 @@
-Welcome, <h4><%= @user.name %></h4>
+Welcome, <h4><%= @user.email %></h4>
 
 <h4>Your Badges</h4>
 <% @user.badges.each do |badge| %>
 	<%= image_tag badge.image.url %><%= badge.name %>
+<% end %>
+
+Completed Trails:
+<% @user.trails.each do |trail| %>
+  <%= trail.name %>
 <% end %>

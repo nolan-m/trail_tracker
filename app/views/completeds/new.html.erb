@@ -1,1 +1,13 @@
-<h1>Log a Trail</h1>
+<h1>Log a Hike</h1>
+<%= render('layouts/errors', object: @completed) %>
+<%= form_for @completed do |f| %>
+  <div class="form-group">
+    <%= f.label :trail_id, "Which trail?" %>
+    <%= f.select :trail_id, Trail.all.collect {|l| [ l.name, l.id ] } %>
+  </div>
+  <div class="form-group">
+    <%= f.label :date_complete, "What day was this trail completed?" %>
+    <%= f.date_field :date_complete %>
+  </div>
+  <%= f.submit "Log Hike", class: "btn btn-success" %>
+<% end %>

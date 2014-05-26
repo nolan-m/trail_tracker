@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526211316) do
+ActiveRecord::Schema.define(version: 20140526215710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140526211316) do
     t.integer "badge_id"
     t.integer "user_id"
     t.date    "date_complete"
+    t.integer "trail_id"
   end
 
   create_table "loops", force: true do |t|
