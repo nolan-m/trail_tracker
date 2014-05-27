@@ -8,10 +8,10 @@ load_and_authorize_resource
     @completed = Completed.new(completed_params)
     if @completed.save
       completed_trail = Trail.find(completed_params[:trail_id])
-      if current_user.highest_summit < completed_trail.higest_summit
-        current_user.update(:highest_summit => completed_trail.highest_summit)
+      if current_user.highest_summit < completed_trail.summit
+        current_user.update(:highest_summit => completed_trail.summit)
       end
-      current_user.update(:distance_hiked => current_user.distance_hiked += completed_trail.distance)
+      current_user.update(:distance_hiked => current_user.distance_hiked += completed_trail.distance.to_d)
       completed_trail.badges.each do |badge|
         current_user.badges << badge
       end
