@@ -1,5 +1,12 @@
+body{
+	background: url('halftone.png')
+}
+div {
+	background-color: white;
+}
 #main {
 	padding-top: 100px;
+	font-family: 'Fira Sans', sans-serif;
 }
 #nav-admin {
 	margin-top: 50px;
