@@ -14,7 +14,7 @@
     <%= link_to "Loops", loops_path, class: "navbar-text pull-left" %>
     <%= link_to "Trails", trails_path, class: "navbar-text pull-left" %>
     <%= link_to "Badges", badges_path, class: "navbar-text pull-left" %>
-  
+
     <div class="navbar-text">
       <center>
         <%= flash[:notice] %>
@@ -27,6 +27,7 @@
         <div class="navbar-text pull-right">
           Logged in as &nbsp; <%= link_to current_user.email, user_path(current_user) %>
         </div>
+        <%= link_to "Log a Trip", new_completed_path, class: "navbar-text pull-right" %>
         <% if current_user.admin %>
         </div>
           <div class="navbar navbar-default navbar-fixed-top" id="nav-admin">

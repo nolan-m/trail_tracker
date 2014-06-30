@@ -4,5 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_and_belongs_to_many :badges, -> { uniq }
+  has_many :badges, -> { uniq }, through: :completeds
+  has_many :trails, -> { uniq },  through: :completeds
+  has_many :completeds, -> { uniq }
 end
+
+

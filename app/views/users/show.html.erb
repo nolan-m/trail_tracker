@@ -1,6 +1,18 @@
-Welcome, <h4><%= @user.name %></h4>
+<div class='col-md-12'>
+  <h1><%= @user.email %></h1>
 
-<h4>Your Badges</h4>
-<% @user.badges.each do |badge| %>
-	<%= image_tag badge.image.url %><%= badge.name %>
-<% end %>
+  <div class='row'>
+    <h4>Your Badges</h4>
+    <% @user.badges.each do |badge| %>
+      <div class="badge_box">
+    	  <%= image_tag badge.image.url %>
+        <p><%= badge.name %></p>
+      </div>
+    <% end %>
+  </div>
+    Completed Trails:
+    <% @user.trails.each do |trail| %>
+      <%= trail.name %>
+    <% end %>
+
+</div>
