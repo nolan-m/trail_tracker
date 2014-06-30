@@ -33,7 +33,8 @@ class Ability
     if user.admin
       can :manage, :all
     elsif user.id
-      can :create, :completeds
+      can [:read, :create], Completed
+      can :read, :all
     else
       can :read, :all
     end
