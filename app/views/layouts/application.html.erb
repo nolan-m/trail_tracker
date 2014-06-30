@@ -28,8 +28,9 @@
           Logged in as &nbsp; <%= link_to current_user.email, user_path(current_user) %>
         </div>
         <%= link_to "Log a Trip", new_completed_path, class: "navbar-text pull-right" %>
+
         <% if current_user.admin %>
-        </div>
+        
           <div class="navbar navbar-default navbar-fixed-top" id="nav-admin">
             <div class="navbar-text">Admin Options</div>
             <%= link_to "Add a Loop", new_loop_path, class: "navbar-text pull-left" %>
@@ -43,8 +44,11 @@
       <% end %>
   </div>
 
-  <div class="col-md-12">
-    <%= yield %>
+  <div class="row">
+    <div class="col-md-12">
+
+      <%= yield %>
+    </div>
   </div>
 
 </div>
