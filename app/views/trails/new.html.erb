@@ -22,7 +22,7 @@
   </div> -->
   <div class="form-group">
   	<%= f.label :difficulty %>
-    <%= f.text_field :difficulty,  class: "input_field" %>
+    <%= f.select :difficulty, [["Difficult", "difficult"], ["Moderate", "moderate"], ["Easy", "easy"]], class: "input_field" %>
   </div>
   <div class="form-group">
   	<%= f.label :loop_id, "Which loop?" %>
