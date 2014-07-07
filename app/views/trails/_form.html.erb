@@ -1,0 +1,35 @@
+<%= render 'layouts/admin' %>
+<div class="col-md-7 form_color">
+<%= render('layouts/errors', object: @trail) %>
+<%= form_for @trail do |f| %>
+	<div class="form-group">
+		<%= f.label :name %>
+    <%= f.text_field :name, autofocus: :true, class: "input_field" %>
+  </div>
+	<div class="form-group">
+		<%= f.label :distance, "Distance (miles)" %>
+    <%= f.text_field :distance, class: "input_field" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :summit, "Summit (feet)" %>
+    <%= f.text_field :summit, class: "input_field" %>
+  </div>
+<!--   <div class="form-group">
+  	<%= f.label :location %>
+    <%= f.text_field :location%>
+  </div> -->
+  <div class="form-group">
+  	<%= f.label :difficulty %>
+    <%= f.select :difficulty, [["Difficult", "difficult"], ["Moderate", "moderate"], ["Easy", "easy"]], class: "input_field" %>
+  </div>
+  <div class="form-group">
+  	<%= f.label :loop_id, "Which loop?" %>
+    <%= f.select :loop_id, Loop.all.collect {|l| [ l.name, l.id ] }, class: "select_box" %>
+  </div>
+  <div class="form-group">
+  	<%= f.label :description %>
+    <%= f.text_area :description, class: "text_field" %>
+  </div>
+ 	<%= f.submit class: "btn btn-success" %>
+<% end %>
+</div>
