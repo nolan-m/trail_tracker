@@ -1,5 +1,5 @@
 body{
-	background-image: image-url("green_cup.png");
+	background: url('green_cup.png')
 }
 #main {
 	padding-top: 40px;
