@@ -4,6 +4,6 @@ Trails::Application.routes.draw do
   resources :users, only: [:show]
   resources :completeds, only: [:new, :create]
   resources :trails
-  resources :badges, only: [:new, :create, :show, :index]
-  resources :loops, only: [:new, :create, :show, :index]
+  resources :badges
+  resources :loops
 end

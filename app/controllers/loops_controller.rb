@@ -23,6 +23,21 @@ class LoopsController < ApplicationController
     end
   end
 
+  def edit
+    @loop = Loop.find(params[:id])
+  end
+
+  def update
+    @loop = Loop.find(params[:id])
+    if @loop.update(loop_params)
+      flash[:notice] = "Loop updated."
+      redirect_to loop_path(@loop)
+    else
+      render 'edit'
+    end
+  end
+
+
 private
   def loop_params
     params.require(:loop).permit(:name)

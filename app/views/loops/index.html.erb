@@ -1,7 +1,7 @@
 <h1>All Loops</h1>
 <ul>
 <% @loops.each do |loop| %>
-	<li><h3><%= loop.name %></h3></li>
+	<li><h3><%= link_to loop.name, loop_path(loop) %></h3></li>
 	<ul>
 		<% loop.trails.each do |trail| %>
 			<li><%= link_to trail.name, trail_path(trail) %></li>
@@ -9,3 +9,4 @@
 	</ul>
 <% end %>
 </ul>
+
