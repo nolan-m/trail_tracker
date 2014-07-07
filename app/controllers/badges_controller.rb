@@ -23,6 +23,21 @@ class BadgesController < ApplicationController
     end
   end
 
+  def edit
+    @badge = Badge.find(params[:id])
+  end
+
+  def update
+    @badge = Badge.find(params[:id])
+    if @badge.update(badge_params)
+      flash[:notice] = "Badge updated."
+      redirect_to badge_path(@badge)
+    else
+      render 'edit'
+    end
+  end
+
+
 private
   def badge_params
     params.require(:badge).permit(:name, :requirements, :badge_type, :image, :trail_ids => [])
