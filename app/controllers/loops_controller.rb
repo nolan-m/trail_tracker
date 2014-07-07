@@ -37,6 +37,13 @@ class LoopsController < ApplicationController
     end
   end
 
+  def destroy
+    @loop = Loop.find(params[:id])
+    @loop.destroy
+    flash[:notice] = "Loop deleted."
+    redirect_to loops_path
+  end
+
 
 private
   def loop_params
