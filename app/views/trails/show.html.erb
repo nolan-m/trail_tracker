@@ -12,3 +12,5 @@
 	<li><%= link_to badge.name, badge_path(badge) %> <%= image_tag badge.image.url(:thumb) %></li>
 <% end %>
 </ul>
+
+<%= link_to 'Edit', edit_trail_path(@trail), :class => 'btn btn-danger' %>

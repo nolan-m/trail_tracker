@@ -3,7 +3,7 @@ Trails::Application.routes.draw do
   root to: "welcome#index"
   resources :users, only: [:show]
   resources :completeds, only: [:new, :create]
-  resources :trails, only: [:new, :create, :show, :index]
+  resources :trails
   resources :badges, only: [:new, :create, :show, :index]
   resources :loops, only: [:new, :create, :show, :index]
 end
