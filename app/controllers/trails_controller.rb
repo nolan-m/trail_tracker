@@ -37,6 +37,14 @@ class TrailsController < ApplicationController
     end
   end
 
+  def destroy
+    @trail = Trail.find(params[:id])
+    @trail.destroy
+    flash[:notice] = "Trail deleted."
+    redirect_to trails_path
+  end
+
+
 private
   def trail_params
     params.require(:trail).permit(:name, :distance, :summit, :difficulty, :location, :loop_id, :description)
