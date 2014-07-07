@@ -1,12 +1,2 @@
-<%= render 'layouts/admin' %>
 <h1>Add a Loop</h1>
-<div class="col-md-6 form_color">
-<%= render('layouts/errors', object: @loop) %>
-<%= form_for @loop do |f| %>
-	<div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: :true, class: "input_field" %>
-  </div>
- 	<%= f.submit class: "btn btn-success" %>
-<% end %>
-</div>
+<%= render 'form' %>
