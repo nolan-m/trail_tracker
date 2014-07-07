@@ -37,6 +37,13 @@ class BadgesController < ApplicationController
     end
   end
 
+ def destroy
+    @badge = Badge.find(params[:id])
+    @badge.destroy
+    flash[:notice] = "Badge deleted."
+    redirect_to badges_path
+  end
+
 
 private
   def badge_params
